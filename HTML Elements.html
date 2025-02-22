@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a download="Report.txt">Download Report.txt</a>
+    <div class="lorem-text">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo culpa quam
+      eos. Odio, aliquid id? Expedita doloribus quae perspiciatis ipsam nesciunt
+      facere quos quod repellat assumenda ipsum nam voluptates dolor ex
+      maiores saepe incidunt doloremque molestias illum dolores maxime, esse earum
+      magni voluptate laudantium optio nulla ut! Consectetur eaque deserunt
+      voluptatibus voluptates consequuntur nemo minima quo praesentium, omnis,
+      adipisci hic optio consequatur. Voluptate error similique sequi. Blanditiis
+      non eaque fugit. Modi illum unde numquam ipsa qui, cupiditate, iste dolor
+    </div>
+
+    <script>
+      const content = 'Hello, World! Report content...';
+      const loremDiv = document.getElementsByClassName('lorem-text')[0].innerText;
+      
+      console.log('loremDiv', loremDiv);
+      let link = document.querySelector('a');
+      const blob = new Blob([loremDiv], { type: 'text/plain' });
+      link.href = URL.createObjectURL(blob);
+    </script>
+  </body>
+</html>
